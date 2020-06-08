@@ -16,8 +16,9 @@ $config = [
     ],
     'components' => [
         'request' => [
+            'enableCookieValidation' => false,
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '96SYG9S76GCDS976DGSC9S7DC6DF9',
+//            'cookieValidationKey' => '5SD7R6TGSDC7DTSDTDSVDST5DV9CD',
             'parsers' => [
               'application/json' => JsonParser::class,
             ]
@@ -27,6 +28,8 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
+            'enableSession' => false, //We won’t be using cookies for authentication
+            'loginUrl' => null, //We also wan’t to receive a 401 response instead of a redirect to the login
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [

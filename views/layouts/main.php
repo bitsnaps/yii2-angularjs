@@ -5,8 +5,8 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+//use yii\bootstrap\Nav;
+//use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 //use app\assets\AngularAsset;
@@ -55,7 +55,13 @@ AppAsset::register($this);
                 <li data-match-route="/contact">
                     <a href="#/contact">Contact</a>
                 </li>
-                <li data-match-route="/login">
+                <li data-match-route="/dashboard" ng-show="loggedIn()" class="ng-hide">
+                    <a href="#/dashboard">Dashboard</a>
+                </li>
+                <li ng-class="{active:isActive('/logout')}" ng-show="loggedIn()" ng-click="logout()"  class="ng-hide">
+                    <a href="">Logout</a>
+                </li>
+                <li data-match-route="/login" ng-hide="loggedIn()">
                     <a href="#/login">Login</a>
                 </li>
             </ul>
@@ -64,10 +70,6 @@ AppAsset::register($this);
 </nav>
 
     <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
         
         <div ng-view></div>
         

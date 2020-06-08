@@ -60,16 +60,6 @@ class SiteController extends Controller
         // This makes Yii2 render the layout without a view.
         return $this->renderContent(null);
     }
-    
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
-//    public function actionIndex()
-//    {
-//        return $this->render('index');
-//    }
 
     /**
      * Login action.
