@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "bower-asset/angular": "~1.7.9",
         "bower-asset/angular-ui-router": "~1.0.26",
-        "bower-asset/angular-strap": "~2.3.12"
+        "bower-asset/angular-strap": "~2.3.12",
+        "bower-asset/angular-cookies": "~1.7.9"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

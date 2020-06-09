@@ -21,24 +21,23 @@ controllers.controller('ContactController', ['$scope', '$http', '$window',
         $scope.contact = function () {
             $scope.submitted = true;
             $scope.error = {};
-            $http.post('api/contact', $scope.contactModel).success(
+            $http.post('api/contact', $scope.contactModel)
+                    .then(
                 function (data) {
                     $scope.contactModel = {};
                     $scope.flash = data.flash;
                     $window.scrollTo(0,0);
                     $scope.submitted = false;
                     $scope.captchaUrl = 'site/captcha' + '?' + new Date().getTime();
-            }).error(
-                function (data) {
+            }, function (data) {
                     angular.forEach(data, function (error) {
                         $scope.error[error.field] = error.message;
                     });
-                }
-            );
+                });
         };
 
         $scope.refreshCaptcha = function() {
-            $http.get('site/captcha?refresh=1').success(function(data) {
+            $http.get('site/captcha?refresh=1').then(function(data) {
                 $scope.captchaUrl = data.url;
             });
         };
@@ -46,7 +45,7 @@ controllers.controller('ContactController', ['$scope', '$http', '$window',
 
 controllers.controller('DashboardController', ['$scope', '$http',
     function ($scope, $http) {
-        $http.get('api/dashboard').success(function (data) {
+        $http.get('api/dashboard').then(function (data) {
            $scope.dashboard = data;
         })
     }
@@ -57,17 +56,16 @@ controllers.controller('LoginController', ['$scope', '$http', '$window', '$locat
         $scope.login = function () {
             $scope.submitted = true;
             $scope.error = {};
-            $http.post('api/login', $scope.userModel).success(
-                function (data) {
+            $http.post('api/login', $scope.userModel)
+            .then(
+                function successCallback(data) {
                     $window.sessionStorage.access_token = data.access_token;
                     $location.path('/dashboard').replace();
-            }).error(
-                function (data) {
+            }, function errorCallback(data) {
                     angular.forEach(data, function (error) {
                         $scope.error[error.field] = error.message;
                     });
-                }
-            );
+            });
         };
     }
 ]);

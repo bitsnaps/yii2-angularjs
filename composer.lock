@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "208220022258b6aaf2bfcbb472cf4c94",
+    "content-hash": "36b4054d0a083c456c6148e1002c11ef",
     "packages": [
         {
             "name": "bower-asset/angular",
@@ -18,6 +18,27 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/angular/bower-angular/zipball/84a5b810f33f82a552cee361268b77181691ce65",
                 "reference": "84a5b810f33f82a552cee361268b77181691ce65"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/angular-cookies",
+            "version": "v1.7.9",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:angular/bower-angular-cookies.git",
+                "reference": "9d2e49488662321c95d65d8d2423842184ba2696"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-cookies/zipball/9d2e49488662321c95d65d8d2423842184ba2696",
+                "reference": "9d2e49488662321c95d65d8d2423842184ba2696"
+            },
+            "require": {
+                "bower-asset/angular": "1.7.9"
             },
             "type": "bower-asset",
             "license": [

@@ -3,14 +3,18 @@
 namespace app\controllers;
 
 use Yii;
-use yii\base\Response;
 use yii\filters\ContentNegotiator;
 use yii\filters\auth\HttpBearerAuth;
+use yii\filters\AccessControl;
 use app\models\ContactForm;
 use app\models\LoginForm;
 use app\models\SignupForm;
 
 
+/**
+ * If your controllers extend from [[yii\rest\ActiveController]], you may 
+ * override the [[yii\rest\Controller::checkAccess()|checkAccess()]]
+ */
 class ApiController extends \yii\rest\Controller {
 
 
@@ -28,7 +32,7 @@ class ApiController extends \yii\rest\Controller {
             'class' => ContentNegotiator::className(),
             'formats' => [
                 // we will only use JSON 
-                'application/json' => Response::FORMAT_JSON,
+                'application/json' => yii\web\Response::FORMAT_JSON,
             ],
         ];
         
