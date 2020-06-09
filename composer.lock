@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8f5be4f7fa899be81b74b30e98dddec",
+    "content-hash": "208220022258b6aaf2bfcbb472cf4c94",
     "packages": [
         {
             "name": "bower-asset/angular",
@@ -18,27 +18,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/angular/bower-angular/zipball/84a5b810f33f82a552cee361268b77181691ce65",
                 "reference": "84a5b810f33f82a552cee361268b77181691ce65"
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "bower-asset/angular-route",
-            "version": "v1.7.9",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:angular/bower-angular-route.git",
-                "reference": "ff545591491260ebff98892fac5b26bc34b7e4c4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular-route/zipball/ff545591491260ebff98892fac5b26bc34b7e4c4",
-                "reference": "ff545591491260ebff98892fac5b26bc34b7e4c4"
-            },
-            "require": {
-                "bower-asset/angular": "1.7.9"
             },
             "type": "bower-asset",
             "license": [
@@ -62,6 +41,27 @@
                 "bower-asset/angular": ">=1.2.21,<2.0.0"
             },
             "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/angular-ui-router",
+            "version": "1.0.26",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:angular-ui/angular-ui-router-bower.git",
+                "reference": "edbb0addeb404fce773f1a03b9b567ae96a42611"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular-ui/angular-ui-router-bower/zipball/edbb0addeb404fce773f1a03b9b567ae96a42611",
+                "reference": "edbb0addeb404fce773f1a03b9b567ae96a42611"
+            },
+            "require": {
+                "bower-asset/angular": ">=1.2.0"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/bootstrap",
