@@ -47,7 +47,9 @@ controllers.controller('DashboardController', ['$scope', '$http',
     function ($scope, $http) {
         $http.get('api/dashboard').then(function (data) {
            $scope.dashboard = data;
-        })
+        }, function(response){
+            console.log('Error: ', response.data.message);            
+        });
     }
 ]);
 

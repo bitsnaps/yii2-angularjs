@@ -71,9 +71,11 @@ AppAsset::register($this);
 
     <div class="container">
         
-        <!--<div ng-view></div>-->
-          <!-- ui router -->
-          <ui-view></ui-view>
+        <!-- ngRoute -->
+        <div ng-view></div>
+        
+          <!-- ui-router -->
+          <!--<ui-view></ui-view>-->
         
     </div>
 </div>

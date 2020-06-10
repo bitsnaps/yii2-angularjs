@@ -1,11 +1,11 @@
 var app = angular.module('app', [
-    'ui.router',
-    'ngCookies',
-//    'ngRoute',      //$routeProvider
+//    'ui.router',
+//    'ngCookies',
+    'ngRoute',      //$routeProvider
     'mgcrea.ngStrap', //bs-navbar, data-match-route directives
     'controllers'       //Our module /web/js/controllers.js
 ]);
-
+/*
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state({
@@ -43,7 +43,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     });
 
     $urlRouterProvider.otherwise('/');
-});/*.run(['$rootScope', '$transitions', '$state', '$cookies', '$http', 'AuthService',
+}).run(['$rootScope', '$transitions', '$state', '$cookies', '$http', 'AuthService',
     function ($rootScope, $transitions, $state, $cookies, $http, AuthService) {
 
         // keep user logged in after page refresh
@@ -59,10 +59,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 return $state.target("login");
             }
         });
-    }]);*/
+    }]);
+*/
 
 // this uses ngRoute
-/*app.config(['$routeProvider', '$httpProvider',
+app.config(['$routeProvider', '$httpProvider',
     function($routeProvider, $httpProvider) {
         $routeProvider.
             when('/', {
@@ -92,7 +93,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             });
         $httpProvider.interceptors.push('authInterceptor');
     }
-]);*/
+]);
 
 app.factory('authInterceptor', function ($q, $window, $location) {
     return {
@@ -112,9 +113,10 @@ app.factory('authInterceptor', function ($q, $window, $location) {
     };
 });
 
-/*app.factory('AuthService',
-    ['$http', '$cookies', '$rootScope',
-        function ($http, $cookies, $rootScope) {
+/*
+app.factory('AuthService',
+    ['$http', '$window', '$cookies', '$rootScope',
+        function ($http, $window, $cookies, $rootScope) {
             var service = {};
 
             // Authenticates throug a rest service

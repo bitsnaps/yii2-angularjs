@@ -22,9 +22,9 @@ class AngularAsset extends AssetBundle
      */
     public $js = [
         'angular/angular.js',
-//        'angular-route/angular-route.js',
-        'angular-cookies/angular-cookies.js',
-        'angular-ui-router/release/angular-ui-router.js',
+        'angular-route/angular-route.js',
+//        'angular-cookies/angular-cookies.js', //"bower-asset/angular-cookies": "~1.7.9"
+//        'angular-ui-router/release/angular-ui-router.js', //"bower-asset/angular-ui-router": "~1.0.26",
         'angular-strap/dist/angular-strap.js',
     ];
 

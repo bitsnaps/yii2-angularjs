@@ -101,7 +101,7 @@ class ApiController extends \yii\rest\Controller {
             'username' => Yii::$app->user->identity->username,
             'access_token' => Yii::$app->user->identity->getAuthKey(),
         ];
-
+        
         return $response;
     }
     
